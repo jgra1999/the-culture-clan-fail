@@ -124,13 +124,21 @@ const { title } = Astro.props;
 			monospace;
 	}
 
-
 	body{
 		@apply grid place-items-center px-8 relative;
 		font-family: 'Montserrat', sans-serif;
 	}
 
 	body > .body__container {
-		@apply container mt-24;
+		@apply container mt-32;
+		
 	}
+
+	::-webkit-scrollbar {
+	@apply w-2 bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-zinc-300 rounded;
+}
 </style>
