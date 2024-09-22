@@ -1,0 +1,13 @@
+---
+
+interface Props {
+    containerStyles: string
+}
+
+const { containerStyles } = Astro.props;
+---
+
+<section class={`grid grid-cols-2 items-center p-8 w-full rounded-custom ${containerStyles}`} >
+		<slot name="first-col"/>	
+		<slot name="second-col"/>	
+</section>
