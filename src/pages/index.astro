@@ -1,24 +1,24 @@
 ---
 import BannerContainer from '@/components/ui/BannerContainer.astro';
 import Layout from '../layouts/Layout.astro';
+import ButtonPrimary from '@/components/ui/ButtonPrimary.astro';
 ---
 
 <Layout title="Inicio">
 	<main>
-		<BannerContainer containerStyles='bg-[#E68D12] h-[680px]'>
+		<BannerContainer containerStyles='bg-banner1 h-[680px]'>
 			<div slot="first-col" class="space-y-5">
 				<div class="flex flex-col">
 					<h4 class="font-bold text-4xl">Nueva Colección</h4>
 					<h2 class="font-extrabold text-white text-[140px] leading-none uppercase">Fitness Culture</h2>
-					<!-- <h2 class="font-bold text-white text-[140px]">Culture</h2> -->
 				</div>
-				<a href="/" class="rounded-2xl text-lg font-semibold bg-white py-3 px-10 inline-block">Ver Tienda</a>
+				<ButtonPrimary text='Ver Tienda' link='/' containerStyles='bg-white text-banner1 hover:bg-darkGray hover:text-white active:text-white' />
 			</div>
 			<div slot="second-col">
-				<img src="./img/cbum.png" class="w-[486px]" alt="Imagen de Franelas Linea Fitness" loading="lazy" />
-				<div class="flex flex-col items-end w-full text-right">
+				<img src="./img/fit-banner-img.webp" class="w-[520] mb-10" alt="Imagen de Franelas Linea Fitness" loading="lazy" />
+				<div class="flex flex-col items-end w-full text-right ">
 					<h4 class="text-lg font-bold">Descripción:</h4>
-					<p class="text-white font-semibold text-pretty max-w-80 ">Oversize con cuello RIB, compuesta de 150g y 100% algodon, con estampados DTF </p>
+					<p class="text-white font-semibold text-pretty max-w-80 ">Oversize con cuello RIB, compuesta de 150g y 100% algodón, con estampados DTF </p>
 				</div>
 			</div>
 		</BannerContainer>
