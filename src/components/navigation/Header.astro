@@ -1,0 +1,33 @@
+---
+import { ShoppingBagIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import Logo from "../ui/Logo.astro";
+
+---
+
+<header class='absolute top-0 w-full pt-5 pr-8'>
+    <nav class='bg-transparent flex justify-between items-center'>
+        <a href='/'>
+            <Logo />
+        </a>
+
+        <ul class='flex gap-x-[70px] font-medium'>
+            <li>
+                <a href='/' class='opacity-70 hover:opacity-100'>Inicio</a>
+            </li>
+            <li>
+                <a href='/tienda' class='opacity-75 hover:opacity-100'>Catálogo</a>
+            </li>
+            <li>
+                <a href='/faqs' class='opacity-70 hover:opacity-100'>FAQ's</a>
+            </li>
+            <li>
+                <a href='/contacto' class='opacity-70 hover:opacity-100'>Contacto</a>
+            </li>
+        </ul>
+
+        <div class="flex items-center gap-x-3">
+            <UserCircleIcon className="w-6 h-6" />
+            <ShoppingBagIcon className="w-6 h-6" />
+        </div>
+    </nav>
+</header>

@@ -1,4 +1,6 @@
 ---
+import Header from '@/components/navigation/Header.astro';
+
 interface Props {
 	title: string;
 }
@@ -77,7 +79,10 @@ const { title } = Astro.props;
 		<title>The Culture Clan - {title}</title>
 	</head>
 	<body>
-		<div>
+		
+		<Header />
+		<div class="body__container">
+			<p>dsacas</p>
 			<slot />
 		</div>
 	</body>
@@ -112,10 +117,10 @@ const { title } = Astro.props;
 	}
 
 	body{
-		@apply grid place-content-center px-8;
+		@apply grid place-content-center px-8 relative;
 	}
 
-	body > div {
-		@apply container;
+	body > .body__container {
+		@apply container mt-24;
 	}
 </style>
