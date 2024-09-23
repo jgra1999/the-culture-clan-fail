@@ -2,36 +2,36 @@
 import BannerContainer from '@/components/ui/BannerContainer.astro';
 import Layout from '../layouts/Layout.astro';
 import ButtonPrimary from '@/components/ui/ButtonPrimary.astro';
+import Title from '@/components/ui/Title.astro';
 ---
 
 <Layout title="Inicio">
 	<main>
-		<BannerContainer containerStyles='bg-banner1 h-[680px]'>
+		<BannerContainer containerStyles='bg-banner1 h-auto hover:shadow-banner1/60'>
 			<div slot="first-col" class="space-y-5">
 				<div class="flex flex-col">
-					<h4 class="font-bold text-4xl">Nueva Colección</h4>
-					<h2 class="font-extrabold text-white text-[140px] leading-none uppercase">Fitness Culture</h2>
+					<h4 class="font-bold text-sm md:text-lg lg:text-4xl">Nueva Colección</h4>
+					<h2 class="font-extrabold text-white text-4xl sm:text-6xl lg:text-[100px] xl:text-[140px] leading-none uppercase">Fitness Culture</h2>
 				</div>
 				<ButtonPrimary text='Ver Tienda' link='/' containerStyles='bg-white text-banner1 hover:bg-darkGray hover:text-white active:text-white' />
 			</div>
 			<div slot="second-col">
-				<img src="./img/fit-banner-img.webp" class="w-[520] mb-10" alt="Imagen de Franelas Linea Fitness" loading="lazy" />
-				<div class="flex flex-col items-end w-full text-right ">
-					<h4 class="text-lg font-bold">Descripción:</h4>
-					<p class="text-white font-semibold text-pretty max-w-80 ">Oversize con cuello RIB, compuesta de 150g y 100% algodón, con estampados DTF </p>
+				<img src="./img/fit-banner-img.webp" class="w-64 sm:w-full sm:mb-10 absolute sm:static top-1/2 -translate-y-1/2 -right-3 sm:top-0 sm:right-0 sm:translate-y-0" alt="Imagen de Franelas Linea Fitness" loading="lazy" />
+				<div class="hidden sm:flex flex-col items-end w-full text-right">
+					<h4 class="text-sm lg:text-lg font-bold">Descripción:</h4>
+					<p class="text-white text-xs lg:text-base font-semibold text-pretty max-w-80 ">Oversize con cuello RIB, compuesta de 150g y 100% algodón, con estampados DTF </p>
 				</div>
 			</div>
 		</BannerContainer>
+
+		<section class="text-center mt-24">
+			<Title title='Franelas Populares' subtitle='Conoce nuestras oversize mas vendidas' />
+		</section>
 	</main>
 </Layout>
 
 
 <style>
-		@font-face {
-		font-family: 'Poppins';
-		src: url('/fonts/poppins/Poppins-Bold.ttf') format('ttf');
-		font-display: swap;
-	}
 	h4{
 		font-family: 'Poppins', system-ui;
 	}
