@@ -3,6 +3,7 @@ import BannerContainer from '@/components/ui/BannerContainer.astro';
 import Layout from '../layouts/Layout.astro';
 import ButtonPrimary from '@/components/ui/ButtonPrimary.astro';
 import Title from '@/components/ui/Title.astro';
+import Card from '@/components/products/Card.astro';
 ---
 
 <Layout title="Inicio">
@@ -10,7 +11,7 @@ import Title from '@/components/ui/Title.astro';
 		<BannerContainer containerStyles='bg-banner1 h-auto hover:shadow-banner1/60'>
 			<div slot="first-col" class="space-y-5">
 				<div class="flex flex-col">
-					<h4 class="font-bold text-sm md:text-lg lg:text-4xl">Nueva Colección</h4>
+					<h3 class="font-bold text-sm md:text-lg lg:text-3xl">Nueva Colección</h3>
 					<h2 class="font-extrabold text-white text-4xl sm:text-6xl lg:text-[100px] xl:text-[140px] leading-none uppercase">Fitness Culture</h2>
 				</div>
 				<ButtonPrimary text='Ver Tienda' link='/' containerStyles='bg-white text-banner1 hover:bg-darkGray hover:text-white active:text-white' />
@@ -18,7 +19,7 @@ import Title from '@/components/ui/Title.astro';
 			<div slot="second-col">
 				<img src="./img/fit-banner-img.webp" class="w-64 sm:w-full sm:mb-10 absolute sm:static top-1/2 -translate-y-1/2 -right-3 sm:top-0 sm:right-0 sm:translate-y-0" alt="Imagen de Franelas Linea Fitness" loading="lazy" />
 				<div class="hidden sm:flex flex-col items-end w-full text-right">
-					<h4 class="text-sm lg:text-lg font-bold">Descripción:</h4>
+					<h3 class="text-sm lg:text-lg font-bold">Descripción:</h3>
 					<p class="text-white text-xs lg:text-base font-semibold text-pretty max-w-80 ">Oversize con cuello RIB, compuesta de 150g y 100% algodón, con estampados DTF </p>
 				</div>
 			</div>
@@ -26,13 +27,18 @@ import Title from '@/components/ui/Title.astro';
 
 		<section class="text-center mt-24">
 			<Title title='Franelas Populares' subtitle='Conoce nuestras oversize mas vendidas' />
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-12 gap-8">
+				<Card name='Ronnie Coleman' />
+				<Card name='Ronnie Coleman' />
+				<Card name='Ronnie Coleman' />
+			</div>
 		</section>
 	</main>
 </Layout>
 
 
 <style>
-	h4{
+	h3{
 		font-family: 'Poppins', system-ui;
 	}
 </style>
