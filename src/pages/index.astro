@@ -1,14 +1,16 @@
 ---
-import BannerContainer from '@/components/ui/BannerContainer.astro';
+import BannerContainer from '@/components/banners/BannerContainer.astro';
 import Layout from '../layouts/Layout.astro';
 import ButtonPrimary from '@/components/ui/ButtonPrimary.astro';
 import Title from '@/components/ui/Title.astro';
 import Card from '@/components/products/Card.astro';
+import BannerInfo from '@/components/banners/BannerInfo.astro';
+import BannerImage from '@/components/banners/BannerImage.astro';
 ---
 
 <Layout title="Inicio">
 	<main>
-		<BannerContainer containerStyles='bg-banner1 h-auto hover:shadow-banner1/60'>
+		<BannerContainer containerStyles='grid-cols-2 bg-banner1 hover:shadow-banner1/60 sm:p-8'>
 			<div slot="first-col" class="space-y-5">
 				<div class="flex flex-col">
 					<h3 class="font-bold text-sm md:text-lg lg:text-3xl">Nueva Colección</h3>
@@ -27,11 +29,24 @@ import Card from '@/components/products/Card.astro';
 
 		<section class="text-center mt-24">
 			<Title title='Franelas Populares' subtitle='Conoce nuestras oversize mas vendidas' />
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-12 gap-8">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12 gap-8">
 				<Card name='Ronnie Coleman' />
 				<Card name='Ronnie Coleman' />
 				<Card name='Ronnie Coleman' />
 			</div>
+		</section>
+
+		<section>
+			<BannerContainer containerStyles='grid-cols-1 md:grid-cols-2 bg-banner2 hover:shadow-banner2/60 my-40 pt-44 pb-10 md:p-4 lg:p-8 text-white lg:min-h-[400px] 2xl:min-h-[500px]'>
+			<div slot="first-col">
+				<BannerImage firstTitle='lana' secondTitle='del rey' subtitle='Tela 200g' image='/img/cbum.png' imageAlt='Franela Oversize inspirada en Lana del Rey' />
+			</div>
+			<div class="flex flex-col items-center md:items-start z-10 pl-20 xl:pl-0" slot="second-col">
+				<BannerInfo title='Artistas' subtitle='Colección Destacada' description='Nuestra coleccion consiste en diseños llamativos sobre algunos de los mejores grupos, cantantes y musicos del momento y la historia.' />
+				
+				<ButtonPrimary text='Ver Tienda' link='/' containerStyles='bg-white text-banner2 hover:bg-darkGray hover:text-white active:text-white mt-4' />
+			</div>
+		</BannerContainer>
 		</section>
 	</main>
 </Layout>
