@@ -5,14 +5,15 @@ interface Props{
     subtitle: string
     image: string
     imageAlt: string
+    imageOtherStyles: string
 }
 
-const {firstTitle, secondTitle, subtitle,  image,  imageAlt} = Astro.props
+const {firstTitle, secondTitle, subtitle,  image,  imageAlt, imageOtherStyles} = Astro.props
 
 ---
 
 <div class="flex flex-col items-center md:items-start mb-10">
-    <img src={image} class="w-72 lg:w-96 2xl:w-[460px] absolute -top-24 md:top-1/2 md:-translate-y-1/2 md:left-24 lg:left-40 2xl:left-52" alt={imageAlt}>
+    <img src={image} class={`w-72 lg:w-96 2xl:w-[460px] absolute -top-24 md:top-1/2 md:-translate-y-1/2 ${imageOtherStyles}`} alt={imageAlt}>
     <div class="text-center md:text-left">
         <span class="font-semibold text-sm">{subtitle}</span>
         <h2 class="font-extrabold text-4xl md:text-5xl lg:text-7xl 2xl:text-[90px] uppercase">{firstTitle}</h2>
