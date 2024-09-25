@@ -6,7 +6,9 @@ export default {
 			colors: {
 				darkGray: '#3A3A3A',
 				banner1: '#E5A41B',
-				banner2: '#E61B1B'
+				banner2: '#E61B1B',
+				banner3: '#333847',
+				banner4: '#E61B5B'
 			}
 		}
 	},

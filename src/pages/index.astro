@@ -6,6 +6,7 @@ import Title from '@/components/ui/Title.astro';
 import Card from '@/components/products/Card.astro';
 import BannerInfo from '@/components/banners/BannerInfo.astro';
 import BannerImage from '@/components/banners/BannerImage.astro';
+import ContactForm from '@/components/ui/ContactForm.astro';
 ---
 
 <Layout title="Inicio">
@@ -37,23 +38,58 @@ import BannerImage from '@/components/banners/BannerImage.astro';
 		</section>
 
 		<section>
-			<BannerContainer containerStyles='grid-cols-1 md:grid-cols-2 bg-banner2 hover:shadow-banner2/60 my-40 pt-44 pb-10 md:p-4 lg:p-8 text-white lg:min-h-[400px] 2xl:min-h-[500px]'>
+			<BannerContainer containerStyles='grid-cols-1 md:grid-cols-2 bg-banner2 hover:shadow-banner2/60 mt-40 pt-44 pb-10 md:p-4 lg:p-8 text-white lg:min-h-[400px] 2xl:min-h-[500px]'>
 			<div slot="first-col">
-				<BannerImage firstTitle='lana' secondTitle='del rey' subtitle='Tela 200g' image='/img/cbum.png' imageAlt='Franela Oversize inspirada en Lana del Rey' />
+				<BannerImage firstTitle='lana' secondTitle='del rey' subtitle='Tela 200g' image='/img/cbum.png' imageAlt='Franela Oversize inspirada en Lana del Rey' imageOtherStyles='md:left-24 lg:left-40 2xl:left-52'/>
 			</div>
-			<div class="flex flex-col items-center md:items-start z-10 pl-20 xl:pl-0" slot="second-col">
+			<div class="flex flex-col items-center md:items-start z-10 md:pl-20 xl:pl-0" slot="second-col">
 				<BannerInfo title='Artistas' subtitle='Colección Destacada' description='Nuestra coleccion consiste en diseños llamativos sobre algunos de los mejores grupos, cantantes y musicos del momento y la historia.' />
 				
 				<ButtonPrimary text='Ver Tienda' link='/' containerStyles='bg-white text-banner2 hover:bg-darkGray hover:text-white active:text-white mt-4' />
 			</div>
 		</BannerContainer>
 		</section>
+
+		<section class="text-center mt-24">
+			<Title title='Agregadas Recientemente' subtitle='No te pierdas nuestras prendas mas nuevas' />
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12 gap-8">
+				<Card name='Ronnie Coleman' />
+				<Card name='Ronnie Coleman' />
+				<Card name='Ronnie Coleman' />
+			</div>
+		</section>
+
+		<section>
+			<BannerContainer containerStyles='grid-cols-1 md:grid-cols-2 bg-banner3 hover:shadow-banner3/60 mt-40 pt-44 pb-10 md:p-4 lg:p-8 text-white lg:min-h-[400px] 2xl:min-h-[500px]'>
+				<div class="flex flex-col items-center md:items-start z-10 md:pl-20 xl:pl-0" slot="first-col">
+					<BannerInfo title='Tela Lavada' subtitle='Prendas Nuevas' description='Nuestra coleccion consiste en diseños llamativos sobre algunos de los mejores grupos, cantantes y musicos del momento y la historia.' />
+					
+					<ButtonPrimary text='Ver Tienda' link='/' containerStyles='bg-white text-banner3 hover:bg-darkGray hover:text-white active:text-white mt-4' />
+				</div>
+				<div slot="second-col">
+					<BannerImage firstTitle='Acid' secondTitle='Wash' subtitle='Tela 200g' image='/img/cbum.png' imageAlt='Franela Oversize inspirada en Lana del Rey' imageOtherStyles='md:right-24 lg:right-32' />
+				</div>
+		</BannerContainer>
+		</section>
+		
+		<section>
+			<BannerContainer containerStyles='grid-cols-1 md:grid-cols-2 bg-banner4 hover:shadow-banner4/60 mt-36 md:mt-20 pt-44 pb-10 md:p-4 lg:p-8 text-white lg:min-h-[400px] 2xl:min-h-[500px]'>
+				<div slot="first-col">
+					<BannerImage firstTitle='Box' secondTitle='Cut' subtitle='Tela 150g & 200g' image='/img/cbum.png' imageAlt='Franela Oversize inspirada en Lana del Rey' imageOtherStyles='md:left-24 lg:left-40 2xl:left-52' />
+				</div>
+				<div class="flex flex-col items-center md:items-start z-10 md:pl-20 xl:pl-0" slot="second-col">
+					<BannerInfo title='Corte Box' subtitle='Prendas Nuevas' description='Nuestra coleccion consiste en diseños llamativos sobre algunos de los mejores grupos, cantantes y musicos del momento y la historia.' />
+					
+					<ButtonPrimary text='Ver Tienda' link='/' containerStyles='bg-white text-banner4 hover:bg-darkGray hover:text-white active:text-white mt-4' />
+				</div>
+		</BannerContainer>
+		</section>
+
+		<section class="text-center mt-24">
+			<Title title='Diseños Personalizados' subtitle='Si tienes alguna idea o te gustaría tener una franela con un diseño que tengas en mente, nosotros lo haremos por ti' />
+			<div class="w-full flex flex-col items-center">
+				<ContactForm />
+			</div>
+		</section>
 	</main>
 </Layout>
-
-
-<style>
-	h3{
-		font-family: 'Poppins', system-ui;
-	}
-</style>
