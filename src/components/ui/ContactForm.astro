@@ -1,9 +1,14 @@
 ---
 import ButtonPrimary from "./ButtonPrimary.astro";
 
+interface Props{
+    containerStyles?: string
+}
+
+const {containerStyles} = Astro.props
 ---
 
-<form action="" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20 mt-5 md:mt-10 min-w-full lg:min-w-[1000px]">
+<form action="" class={`grid grid-cols-1 md:grid-cols-2 gap-4 min-w-full ${containerStyles}`}>
     <div>
         <input type="text" placeholder="Nombre y Apellido" class="bg-[#F3F3F3] text-zinc-500 font-semibold py-3 pl-3 rounded-lg w-full border-2 border-darkGray">
     </div>
