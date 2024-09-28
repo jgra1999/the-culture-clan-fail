@@ -5,7 +5,7 @@ import Logo from "../ui/icons/Logo.astro";
 ---
 
 <header class='absolute top-0 w-full pt-5 pr-8'>
-    <nav class='bg-transparent hidden md:flex justify-between items-center'>
+    <nav class='bg-transparent hidden md:grid md:grid-cols-3 items-center'>
         <a href='/'>
             <Logo styles="h-20 fill-black" />
         </a>
@@ -25,7 +25,7 @@ import Logo from "../ui/icons/Logo.astro";
             </li>
         </ul>
 
-        <div class="flex items-center gap-x-3">
+        <div class="flex justify-end items-center gap-x-5">
             <UserCircleIcon className="w-6 h-6" />
             <ShoppingBagIcon className="w-6 h-6" />
         </div>
