@@ -2,16 +2,13 @@
 import InstagramIcon from '@/components/ui/icons/InstagramIcon.astro'
 import Layout from '../layouts/Layout.astro'
 
-/* icons */
-// import QrInstagram from '../assets/Qr-Instagram.png'
-// import QrWhatsapp from '../assets/Qr-whatsapp.png'
 import {
-	DevicePhoneMobileIcon,
 	EnvelopeIcon,
 	MapIcon
 } from '@heroicons/react/24/outline'
 import ContactForm from '@/components/ui/ContactForm.astro'
 import Title from '@/components/ui/Title.astro'
+import { WhatsappIcon } from '@/components/ui/icons/icons'
 ---
 
 <Layout title='Contacto'>
@@ -23,26 +20,26 @@ import Title from '@/components/ui/Title.astro'
 				<li
 					class='flex gap-x-1 text-zinc-500 text-sm md:text-base items-center'
 				>
-					<MapIcon className='w-5 h-5 md:w-6 md:h-6 stroke-black' />
+					<MapIcon className='w-5 h-5 md:w-6 md:h-6 stroke-current' />
 					Venezuela | Colombia
 				</li>
 				<li
 					class='flex gap-x-1 text-zinc-500 text-sm md:text-base items-center'
 				>
-					<DevicePhoneMobileIcon className='w-5 h-5 md:w-6 md:h-6 stroke-black' />
+					<WhatsappIcon styles='w-5 h-5 md:w-6 md:h-6 stroke-current' />
 					+58 424-4155064
 				</li>
 				<li
 					class='flex gap-x-1 text-zinc-500 text-sm md:text-base items-center'
 				>
-					<InstagramIcon styles='w-5 h-5 md:w-7 md:h-7 stroke-black' />
+					<InstagramIcon styles='w-5 h-5 md:w-6 md:h-6 stroke-current stroke-2' />
 					@th3cultureclan
 				</li>
 				<li
 					class='flex gap-x-1 text-zinc-500 text-sm md:text-base items-center'
 				>
-					<EnvelopeIcon className='w-5 h-5 md:w-6 md:h-6 stroke-black stroke-[1px]' />
-					adm.thecultureclan@gmail.com
+					<EnvelopeIcon className='w-5 h-5 md:w-6 md:h-6 stroke-current stroke-2' />
+					info@thecultureclan.com
 				</li>
 			</ul>
 		</div>
