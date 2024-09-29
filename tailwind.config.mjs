@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				darkGray: '#3A3A3A',
+				lightGray: '#F3F3F3',
 				banner1: '#E5A41B',
 				banner2: '#E61B1B',
 				banner3: '#333847',
