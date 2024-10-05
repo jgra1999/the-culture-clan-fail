@@ -4,10 +4,8 @@ import SideMenuOptions from '@/components/layouts/SideMenuOptions'
 import {
 	BanknotesIcon,
 	CurrencyDollarIcon,
-	DevicePhoneMobileIcon,
 	PresentationChartBarIcon,
-	ShoppingBagIcon,
-	WalletIcon
+	ArchiveBoxIcon,
 } from '@heroicons/react/20/solid'
 
 // import AdminSideMenu from "./AdminSideMenu.astro";
@@ -33,11 +31,11 @@ const { title } = Astro.props
 					<PresentationChartBarIcon className='flex-shrink-0 w-6 h-6' />
 				</SideMenuOptions>
 				<SideMenuOptions
-					name='Productos'
-					link='/admin/productos'
+					name='Inventario'
+					link='./inventario'
 					otherStyles='text-2xl'
 				>
-					<ShoppingBagIcon className='flex-shrink-0 w-6 h-6' />
+					<ArchiveBoxIcon className='flex-shrink-0 w-6 h-6' />
 				</SideMenuOptions>
 				<SideMenuOptions name='Ingresos' link='./ingresos' otherStyles='text-2xl'>
 					<BanknotesIcon className='flex-shrink-0 w-6 h-6' />
